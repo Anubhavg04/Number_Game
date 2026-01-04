@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Motivation Game - Play, Reflect, Grow</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Analytics for tracking - Will be set by environment variables -->
+    <script>
+        // Set your Google Analytics Measurement ID in environment variables
+        const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || 'YOUR_GA_ID_HERE';
+        
+        if (GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== 'YOUR_GA_ID_HERE') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', GA_MEASUREMENT_ID);
+            
+            // Load Google Analytics script
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+            document.head.appendChild(script);
+        }
+    </script>
+</head>
+<body>
+    <!-- Main Game Container -->
+    <div class="game-container">
+        <!-- Header with Statistics -->
+        <header class="game-header">
+            <h1 class="game-title">🌟 Life Motivation Game</h1>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-label">Total Games:</span>
+                    <span class="stat-value" id="totalGames">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Wins:</span>
+                    <span class="stat-value" id="winCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Losses:</span>
+                    <span class="stat-value" id="lossCount">0</span>
+                </div>
+                <div class="stat-item global-stat">
+                    <span class="stat-label">🌍 Global Players:</span>
+                    <span class="stat-value" id="globalPlayers">...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main class="game-main">
+            <!-- Start Screen -->
+            <div class="screen" id="startScreen">
+                <div class="screen-content">
+                    <h2 class="screen-title">Welcome to the Game! 🎮</h2>
+                    <p class="screen-description">
+                        Test your luck and get a dose of motivation!<br>
+                        Can you guess the magic number?
+                    </p>
+                    <button class="btn btn-primary" id="startBtn">Start Game</button>
+                </div>
+            </div>
+
+            <!-- Game Screen -->
+            <div class="screen hidden" id="gameScreen">
+                <div class="screen-content">
+                    <h2 class="screen-title">Guess the Magic Number! 🔮</h2>
+                    <p class="screen-description">
+                        I'm thinking of a number between 1 and 10.<br>
+                        Can you guess what it is?
+                    </p>
+                    <div class="game-input-container">
+                        <input 
+                            type="number" 
+                            id="guessInput" 
+                            class="game-input" 
+                            min="1" 
+                            max="10" 
+                            placeholder="Enter 1-10"
+                            autocomplete="off"
+                        >
+                        <button class="btn btn-primary" id="submitGuessBtn">Submit Guess</button>
+                    </div>
+                    <div class="hint-container" id="hintContainer"></div>
+                </div>
+            </div>
+
+            <!-- Result Screen -->
+            <div class="screen hidden" id="resultScreen">
+                <div class="screen-content">
+                    <div class="result-icon" id="resultIcon"></div>
+                    <h2 class="screen-title" id="resultTitle"></h2>
+                    <p class="result-message" id="resultMessage"></p>
+                    
+                    <!-- Motivational Quote Section -->
+                    <div class="quote-container" id="quoteContainer">
+                        <div class="quote-text" id="quoteText"></div>
+                        <div class="quote-author" id="quoteAuthor"></div>
+                    </div>
+
+                    <!-- Share Button -->
+                    <button class="btn btn-secondary" id="shareBtn">Share Your Insight 💙</button>
+                    
+                    <!-- Play Again Button -->
+                    <button class="btn btn-primary" id="playAgainBtn">Play Again</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>Play. Reflect. Grow. 🌱</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

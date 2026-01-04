@@ -1,0 +1,2 @@
+[build]
+  environment = { GA_MEASUREMENT_ID = "@ga_measurement_id" }
