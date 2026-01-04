@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Google Analytics for tracking - Will be set by environment variables -->
+    <!-- Google Analytics for tracking -->
     <script>
-        // Set your Google Analytics Measurement ID in environment variables
-        const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || 'YOUR_GA_ID_HERE';
+        // Google Analytics Measurement ID
+        const GA_MEASUREMENT_ID = 'G-KL8YZ1B97P';
         
-        if (GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== 'YOUR_GA_ID_HERE') {
+        if (GA_MEASUREMENT_ID) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
