@@ -2,7 +2,7 @@
 
 **A simple, uplifting web-based game that combines fun gameplay with positive life motivation. Built with pure HTML, CSS, and JavaScript - no frameworks required!**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://your-demo-url.com)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://anubhavlifenumber.netlify.app)
 [![GitHub Stars](https://img.shields.io/github/stars/Anubhavg04/Number_Game)](https://github.com/Anubhavg04/Number_Game)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -18,7 +18,7 @@ The Life Motivation Game was created to spread positivity and encouragement thro
 
 ## 🚀 Live Demo
 
-**[▶️ Play the Game Now](https://your-demo-url.com)**
+**[▶️ Play Now: anubhavlifenumber.netlify.app](https://anubhavlifenumber.netlify.app)**
 
 *Experience the game yourself and get your daily dose of motivation!*
 
